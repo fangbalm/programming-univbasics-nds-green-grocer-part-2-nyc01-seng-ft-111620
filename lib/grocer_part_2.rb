@@ -25,7 +25,7 @@ def apply_coupons(cart, coupon_array)
         coupon_count = consolidated_coupons_hash[consolidated_key][:coupon_count]
         cart_item_count_after_coupon = cart_item_count - consolidated_coupon_number
         cart_item_clearance = cart[consolidated_key][:clearance]
-        
+
         cart[consolidated_key][:count] = cart_item_count_after_coupon
         cart["#{consolidated_key} W/COUPON"] = {price: coupon_item_price, clearance: cart_item_clearance, count: coupon_count}
         #if cart[consolidated_key][:count] == 0
