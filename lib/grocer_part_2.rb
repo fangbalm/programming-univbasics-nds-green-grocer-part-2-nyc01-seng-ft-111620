@@ -21,9 +21,10 @@ def apply_coupons(cart, coupons)
       cart << cart_item_with_coupon
       cart_item[:count] -= coupons[counter][:num]
       end
-      counter += 1
     end
-  return cart
+      counter += 1
+  end
+  return car
 end
 
 
