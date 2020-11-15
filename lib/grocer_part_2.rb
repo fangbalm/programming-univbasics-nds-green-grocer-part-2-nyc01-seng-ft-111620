@@ -40,5 +40,10 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-
+  cart.keys.each do |item|
+   if cart[item][:clearance]
+     cart[item][:price] = (cart[item][:price]* 0.8).round(2)
+   end
+ end
+ cart
 end
