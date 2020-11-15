@@ -1,6 +1,7 @@
 require_relative './part_1_solution.rb'
 
-new_cart = {}
+def apply_coupons(cart, coupons)
+  new_cart = {}
   cart.each do |grocery, info|
     coupons.each do |coupon|
       if grocery == coupon[:item] && info[:count] >= coupon[:num]
@@ -16,6 +17,7 @@ new_cart = {}
 
   end
   new_cart
+end
 
 # def apply_coupons(cart, coupons)
 #   counter = 0
