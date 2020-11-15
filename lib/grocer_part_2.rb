@@ -42,7 +42,7 @@ new_cart = {}
 #   end
 #   cart
 # end
-# 
+#
 
 
 def apply_clearance(cart)
